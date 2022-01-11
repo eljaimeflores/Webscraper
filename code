@@ -16,7 +16,7 @@ req = Request(
 uClient = uReq(req)
 page_html = uClient.read()
 uClient.close()
-# This makes the content as a BeautifulSoup obejct
+# This makes the content as a BeautifulSoup object
 page_soup = soup(page_html, "html.parser")
 # Parses though page content and stores all of the price information in one list
 all_columns = page_soup.findAll("div", {"class": "cell__content"})
